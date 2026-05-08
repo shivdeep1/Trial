@@ -317,7 +317,7 @@ app.post('/api/chat', async (req: Request, res: Response) => {
     if (wantsStream) sseSend(res, { type: 'agent_action', action: 'thinking', label: 'Agent reasoning…' });
 
     const model = genAI.getGenerativeModel({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-2.5-flash-lite',
       tools: [{ functionDeclarations: TOOL_DECLARATIONS }],
       systemInstruction: `${systemContext}
 
